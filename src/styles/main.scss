@@ -1,0 +1,153 @@
+@mixin centrado-horizontal{
+  display: flex !important;
+  justify-content: center;
+}
+
+@mixin centrado-vertical{
+  display: flex !important;
+  align-items: center;
+}
+
+.content{
+  @include centrado-horizontal;
+  @include centrado-vertical;
+  .content-inicial{
+    @include centrado-horizontal;
+    color: white;
+    .content--logo{
+      width: 30rem;
+      height: 12rem;
+    }
+  }
+
+  .appbar-content{
+    .appbar--logo{
+      width: 20rem;
+      height: 8rem;
+    }
+  }
+}
+
+.input-text-icon{
+  position: relative;
+  input[type=text]{
+    padding-left: 40px;
+  }
+  .text-busqueda{
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px;
+    width: 100%;
+    background: #081f33;
+    color: white;
+  }
+  .icon{
+    position: absolute !important;
+    left: 0;
+    top: 9px;
+    padding-left: 10px;
+  }
+}
+
+.boton-menu{
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-active{
+  border-bottom: 2px solid #36c759;
+}
+
+.ajuste-top{
+  margin-top: -5px;
+}
+
+.card-personaje{
+  display: flex;
+  border-radius: 12px !important;
+  .card-imagen{
+    position: relative;
+    .card-personaje--img{
+      border-radius: 6% 0% 0% 6%;
+      
+    }
+    .posicion-boton{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 0.3rem;
+      }
+  }
+  .card-detalle{
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    .status{
+      font-size: 10px;
+      color: #5a5a5a;
+      display: flex;
+      align-items: center;
+      .circle{
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        background: green;
+        margin-right: 0.5rem;
+      }
+    }
+    .detail{
+      font-size: 12px;
+      span{
+        font-size: 10px;
+        color: #828282;
+      }
+    }
+  }
+}
+
+.card-dialog{
+  height: 100%;
+  .card-head{
+    height: 430px;
+    background: #f2f2f2;
+    position: relative;
+    .card-head-img{
+      width: 100%;
+      .card-avatar{
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        border: 4px solid white;
+        display: inline-block;
+      }
+      .poisicion-boton{
+        position: relative;
+        top: -6rem;
+      }
+      .card-personaje-info{
+        position: relative;
+        top: -5rem;
+        text-align: center;
+      }
+    }
+  }
+}
+  .card-text--info{
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    .card-text-title{ 
+      font-size: 12px;
+    }
+  }
+
+.v-dialog  {
+  position: relative;
+  .btn{
+    top: 1rem !important;
+    right: 1rem;
+  }
+}

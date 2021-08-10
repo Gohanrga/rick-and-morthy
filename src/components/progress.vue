@@ -1,0 +1,29 @@
+<template>
+  <v-dialog
+      v-model="progress"
+      hide-overlay
+      persistent
+      width="300"
+    >
+      <v-card
+        color="secondary"
+      >
+        <v-card-text>
+          Procesando....
+          <v-progress-linear
+            indeterminate
+            color="primary"
+            class="mb-0"
+          ></v-progress-linear>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+</template>
+<script>
+import {mapState} from 'vuex';
+export default {
+    computed:{
+        ...mapState(['progress']),
+    },
+}
+</script>
